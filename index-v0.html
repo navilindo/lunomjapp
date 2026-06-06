@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUNO — Own your future, one payment at a time</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAGYElEQVR4nO2bu48cxxHGf1XTM/u6lyDCIA3aFBwIMOADGTmwUgmUQ4dSaMCwUhkGpD/BSiynBqHIgOzEsR4EnAhi4IiEFDEQTIEwGcjA8QjuY6a7y0HvHu/IvduZ3b3bE7UfMNc4zOxM1dfV1dVd1QIYM6CqqDpUFREBOGjPC8zsoI0xEqMnxjjzd8IJBGRZRpblqOrSBD1LxBgJoSKEcOwzUwkQEfK8IMsyzE7k6JxDEDFCCFRVeWAlR594RjtVpSgK4PvZ68cjUpblc8PiCAFJ+fZZS3amKMvhERIOunli9i868rw44sD16I0Xzeyfh4ge6WgHE2/vpjqJhm8ft4u95lhMxFtQzixzZJknhDAhIJ9feZWkeDDMBySmeVjHAi80iQiIpTaSfJSpIFkGmSQiYvOXmxlZlicCUpAzh+lLUtz6I8CjeYFud6GV4zY7yKLWNOV74fEARhX2qE8cloBDuq1ERMPvTfR2qq65MJnCoILoya++gru+i167Qry4A8VYqKXHDkLWH0HpkYd7cPtbqs/v4G/fA3XQySHMjvwOQ9UhRdG2RhaQKfZkgLv8Mu0//Jrw+i6xV0AZsMoDYDVC0HkgEzlzhxYZ0h+R3fya0Z8/obr/P6TXaURCjBFptTpWO64fK99+7VWyP72Fv7RD3O8j0cZDAtLAbaxbPdj4jwFmmAq61cU92CO8/3eGX95tRIKZNSBAldgf0P7Vq+hff0cgwrAEly2i0sIwH5B2gUOJv7/B4NZdtNuBGlZoZmg95QUpK4rLF3AfvE2QCKNq5coDiMuQUYUn4j54m+LyBaSs0uw067cidQN+wbynePdN/KVtbFAmR3hOYJnCsKS6tE3r3Tcx76k7DmdroYINR7irV4hv/CKN+SY9Hy2Z47RrmXAZcb9PeGMXd/UVbDiqZQWzCRCB6HHXrxJ7reTwmqDXgs0ubHbGbffp/zUEbAKJhvVy3PVdiP5pZHoCZgcB0VKQc+2nxDLUeumBQAD//gb65XMWKRiy+xNCrzVXNDf9g0IsI+7aFTQvsBrvPZkAEfAB2eoSL+6keb6m/ibgAgzf/xvD/+49FxZlwPY//0j4+Y9hUC7HGgSoPHZxB9nqYvuD5KhPiBJnD4FoSDvHWo7G0Z2AdQpMBZwmJSeXE+xUttosydrOa1nWyRJIiupks4N2xibVdDM02vHXsiGCRUM7BbrZThHpDHHrdcGyFzZnAMHSSnIGzs9kviKsCVi1AKvGmoBVC7BqrAlYtQCrxpqAVQuwaqwJWLUAq8YcSYElIkTwMbV2zKrllLfeVkqAbveQCxtpw2TafoAZ9nh4qouxlREgQPXRv/AvdxGfdprs0D0s7UPoW69hnSJZySnUJa2MgGCw/48vTnwmAzZ+80us14Ljy3wWwsoIMCON72nZYxlnfrc6p9Lrh7F6JzgNEwIaJjvnwQ9+Gjw7Apo48vGzZ7ETV28ILDAOVZMzIyOVedT6XnpWF0g9GoLVSFSfTIClnLw9HhAHJbLZSoFLDULEwAt0/vJbOmXA5inAUsFvtOtPgWZIpsQnI+LjYaonmGFFsy1ABRtWyMjDZvMawtHPfpSyy/Oac1k1TEdIknVYL0M8wwIMXIbt99GHe8RLO1gVGhVAyKipAs+gScbIgNwhD/ew/T44N9OR1MoOx6ok3v4WipPTTFMhcjQj1PRqAjO0UOz2PWJVL902mwAzUIf/7A76ZJTSXOcUpoI8qfCffZUKp2p0Vs3cYAt/5x5682t0q4v5U4pLF4EP6FaX7OZX+Dv/Qdr1ss41XbMhzlF++CnuwSNksjg5J5AQoV2QP3jE6MNPEVc/kau1KkSjYUVOef87/Hsfk5lCK4dzYAnmA9bKcSj+vY8p73+HFfUyw2bWIBKMEe11GN26i71zg3yvj7y0kUpsQ0wfNDvdsxXj8jhi+qaZoS9tkO/1ie/cYHjrLtqrVyE2wbpQ0rnCnGu4KDxUKuvOsFTWllwq671HVNXmOiUypVhaxsXSehbF0tVixdKQTo8IYEXRnv9k2OFy+fD9KJeHZP5lOUyhcAgVWdae78xANCYaTuoHD8dKywqbJoRO9gsJ81uYiBBCBTAhIBCCRxdZf04EGwt6nhGCPzhLeGD36Vzd+QluTgtmkaoqD/7XpzfsyI0XFc8eoFwfnGR9dHZ9ePoHfXz+/wAiQhit/Or7AAAAAElFTkSuQmCC">
+<meta name="theme-color" content="#0B0B0D">
+<meta name="description" content="LUNO is the motorcycle-ownership platform for East Africa's bodaboda economy. Rent-to-own tracking, driver safety, and a path to ownership — built to be subordinate to the human need.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#060A09; --ink-2:#0A100E; --panel:#0D1512; --card:#101A16; --card-2:#15211C;
+    --line:#1F2D27; --line-2:#2A3A33;
+    --green:#1DD882; --green-d:#0E9F68; --green-glow:#1DD88233;
+    --mint:#7BF5C4; --amber:#F4B740;
+    --white:#F4FBF8; --mute:#94AC9F; --mute-2:#5E726A; --mute-3:#3C4B44;
+    --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+    --maxw:1240px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{background:var(--ink);color:var(--white);font-family:var(--sans);font-weight:400;line-height:1.55;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--green);color:var(--ink)}
+ 
+  /* grain + grid atmosphere */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 0%,transparent 70%);
+            mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 0%,transparent 70%);
+  }
+  .noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+ 
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;position:relative;z-index:2}
+ 
+  /* ---------- NAV ---------- */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .5s var(--ease)}
+  nav.scrolled{background:rgba(6,10,9,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:.06em}
+  .logo-mark{width:40px;height:40px;border-radius:11px;overflow:hidden;display:grid;place-items:center;box-shadow:0 6px 22px var(--green-glow);transition:transform .4s var(--ease)}
+  .logo-mark img{width:100%;height:100%;object-fit:cover;display:block}
+  .logo:hover .logo-mark{transform:rotate(-8deg) scale(1.06)}
+  .nav-links{display:flex;align-items:center;gap:38px}
+  .nav-links a{font-size:14.5px;color:var(--mute);font-weight:500;transition:color .25s;position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--green);transition:width .3s var(--ease)}
+  .nav-links a:hover{color:var(--white)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{padding:11px 22px;border-radius:100px;background:var(--green);color:var(--ink);font-weight:700;font-size:14px;box-shadow:0 6px 22px var(--green-glow);transition:transform .3s var(--ease),box-shadow .3s}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
+  .lang{padding:8px 14px;border:1px solid var(--line-2);border-radius:100px;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:7px;cursor:pointer;transition:border-color .25s}
+  .lang:hover{border-color:var(--green-d)}
+  @media(max-width:880px){.nav-links a:not(.nav-cta),.lang{display:none}}
+ 
+  /* ---------- HERO ---------- */
+  header{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;overflow:hidden}
+  .hero-glow{position:absolute;border-radius:50%;filter:blur(90px);z-index:0;pointer-events:none}
+  .g1{width:620px;height:620px;background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:.16;top:-180px;left:-160px}
+  .g2{width:480px;height:480px;background:radial-gradient(circle,var(--mint) 0%,transparent 70%);opacity:.08;bottom:-120px;right:-80px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--green);margin-bottom:30px}
+  .eyebrow::before{content:"";width:34px;height:1.5px;background:var(--green)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(54px,7.4vw,108px);line-height:.94;letter-spacing:-.02em;margin-bottom:34px}
+  h1 .it{font-style:italic;font-weight:400;color:var(--green)}
+  h1 .lt{font-weight:300}
+  .hero-sub{font-size:18.5px;color:var(--mute);max-width:480px;line-height:1.6;margin-bottom:40px;font-weight:400}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .btn-primary{padding:16px 30px;border-radius:100px;background:var(--green);color:var(--ink);font-weight:700;font-size:15.5px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 10px 34px var(--green-glow);transition:transform .35s var(--ease),box-shadow .35s}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 44px var(--green-glow)}
+  .btn-primary svg{transition:transform .35s var(--ease)}
+  .btn-primary:hover svg{transform:translateX(5px)}
+  .btn-ghost{padding:16px 28px;border-radius:100px;border:1px solid var(--line-2);color:var(--white);font-weight:600;font-size:15.5px;transition:border-color .3s,background .3s}
+  .btn-ghost:hover{border-color:var(--green);background:rgba(29,216,130,.06)}
+ 
+  /* phone mockup */
+  .hero-visual{position:relative;display:grid;place-items:center;height:100%}
+  .phone{position:relative;width:280px;height:570px;border-radius:42px;background:linear-gradient(165deg,#16241E,#0B130F);border:1px solid var(--line-2);padding:13px;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.02) inset;transform:rotate(3deg) translateY(0);animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-16px)}}
+  .phone-screen{width:100%;height:100%;border-radius:30px;background:radial-gradient(circle at 50% 0%,#13211B,#080D0B);overflow:hidden;position:relative;display:flex;flex-direction:column;padding:26px 22px}
+  .notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:96px;height:26px;background:#070C0A;border-radius:0 0 16px 16px;z-index:5}
+  .ps-label{font-size:11px;color:var(--mute-2);letter-spacing:.1em;text-transform:uppercase;margin-top:34px}
+  .ps-driver{font-family:var(--serif);font-size:21px;font-weight:600;margin-top:4px}
+  .ring-wrap{margin:30px auto 12px;position:relative;width:172px;height:172px}
+  .ring-wrap svg{transform:rotate(-90deg)}
+  .ps-pct{position:absolute;inset:0;display:grid;place-items:center;flex-direction:column;text-align:center}
+  .ps-pct b{font-family:var(--serif);font-size:42px;font-weight:600;color:var(--green);line-height:1;display:block}
+  .ps-pct span{font-size:10.5px;color:var(--mute-2);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;display:block}
+  .ps-freedom{background:var(--card-2);border:1px solid var(--line);border-radius:16px;padding:15px 17px;margin-top:8px}
+  .ps-freedom .lbl{font-size:10px;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+  .ps-freedom .date{font-family:var(--serif);font-size:19px;font-weight:600;margin-top:3px}
+  .ps-freedom .sub{font-size:11.5px;color:var(--mute-2);margin-top:2px}
+  .ps-row{display:flex;gap:9px;margin-top:11px}
+  .ps-pay{flex:1;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px}
+  .ps-pay .v{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--white)}
+  .ps-pay .k{font-size:9.5px;color:var(--mute-2);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+ 
+  /* floating badge */
+  .float-badge{position:absolute;background:rgba(10,16,14,.9);backdrop-filter:blur(12px);border:1px solid var(--line-2);border-radius:16px;padding:13px 17px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
+  .fb-1{top:8%;left:-26px;animation:float 5s ease-in-out infinite}
+  .fb-2{bottom:13%;right:-22px;animation:float 5.6s ease-in-out infinite .6s}
+  .fb-ic{width:38px;height:38px;border-radius:10px;background:var(--green-glow);display:grid;place-items:center}
+  .fb-ic svg{width:20px;height:20px}
+  .fb-t b{font-size:14px;display:block;font-weight:700}
+  .fb-t span{font-size:11px;color:var(--mute-2)}
+  @media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-visual{display:none}}
+ 
+  /* ---------- MARQUEE / trust ---------- */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;overflow:hidden;position:relative;z-index:2;background:var(--ink-2)}
+  .trust-track{display:flex;gap:64px;white-space:nowrap;animation:scroll 28s linear infinite;width:max-content}
+  .trust:hover .trust-track{animation-play-state:paused}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  .trust-item{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--mute);font-weight:500;letter-spacing:.02em}
+  .trust-item svg{width:17px;height:17px;flex-shrink:0}
+  .trust-item b{color:var(--white);font-weight:700}
+ 
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{position:relative;z-index:2;padding:120px 0}
+  .sec-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--green);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .sec-eyebrow::before{content:"";width:30px;height:1.5px;background:var(--green)}
+  .sec-title{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.6vw,58px);line-height:1.04;letter-spacing:-.015em;margin-bottom:24px;max-width:780px}
+  .sec-title .it{font-style:italic;font-weight:400;color:var(--green)}
+  .sec-lead{font-size:18px;color:var(--mute);max-width:620px;line-height:1.6}
+ 
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+ 
+  /* ---------- PROBLEM ---------- */
+  .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px}
+  .prob{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:38px 32px;transition:transform .5s var(--ease),border-color .4s,background .4s;position:relative;overflow:hidden}
+  .prob::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% -20%,var(--green-glow),transparent 60%);opacity:0;transition:opacity .5s}
+  .prob:hover{transform:translateY(-8px);border-color:var(--line-2)}
+  .prob:hover::after{opacity:1}
+  .prob-ic{width:56px;height:56px;border-radius:15px;background:var(--card-2);border:1px solid var(--line-2);display:grid;place-items:center;margin-bottom:26px;position:relative;z-index:1}
+  .prob-ic svg{width:27px;height:27px}
+  .prob h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:13px;position:relative;z-index:1}
+  .prob p{font-size:15px;color:var(--mute);line-height:1.62;position:relative;z-index:1}
+ 
+  /* ---------- FEATURES (alternating) ---------- */
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:90px}
+  .feat:first-of-type{margin-top:64px}
+  .feat.flip .feat-text{order:2}
+  .feat-tag{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:100px;background:var(--green-glow);color:var(--mint);font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:22px}
+  .feat-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  .feat h3{font-family:var(--serif);font-size:clamp(28px,3.4vw,40px);font-weight:600;line-height:1.08;margin-bottom:18px;letter-spacing:-.01em}
+  .feat h3 .it{font-style:italic;color:var(--green);font-weight:400}
+  .feat p{font-size:16.5px;color:var(--mute);line-height:1.66;margin-bottom:26px}
+  .feat-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .feat-list li{display:flex;align-items:flex-start;gap:13px;font-size:15px;color:var(--white)}
+  .feat-list svg{width:21px;height:21px;flex-shrink:0;margin-top:1px}
+  .feat-visual{height:380px;border-radius:26px;border:1px solid var(--line);position:relative;overflow:hidden;background:linear-gradient(160deg,var(--card),var(--ink-2))}
+  .fv-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:.13;filter:blur(50px)}
+  .fv-1{top:-60px;right:-40px}
+  /* SOS visual */
+  .sos-ring{position:absolute;inset:0;display:grid;place-items:center}
+  .sos-btn{width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,#FF5C5C,#C72E2E);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:30px;color:#fff;letter-spacing:.06em;box-shadow:0 0 0 0 rgba(255,92,92,.5);animation:pulse 2.4s var(--ease) infinite;position:relative;z-index:2}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,92,92,.45)}70%{box-shadow:0 0 0 46px rgba(255,92,92,0)}100%{box-shadow:0 0 0 0 rgba(255,92,92,0)}}
+  /* owner dash visual */
+  .dash{position:absolute;inset:0;padding:34px;display:flex;flex-direction:column;gap:14px}
+  .dash-top{display:flex;justify-content:space-between;align-items:flex-end}
+  .dash-score{font-family:var(--serif);font-size:60px;font-weight:600;color:var(--green);line-height:.9}
+  .dash-score small{font-size:18px;color:var(--mute-2)}
+  .dash-lbl{font-size:11px;color:var(--mute-2);letter-spacing:.12em;text-transform:uppercase}
+  .bars{display:flex;align-items:flex-end;gap:10px;height:120px;margin-top:8px}
+  .bar{flex:1;background:linear-gradient(to top,var(--green-d),var(--green));border-radius:7px 7px 0 0;opacity:.85;animation:grow 1.2s var(--ease) backwards}
+  @keyframes grow{from{height:0!important;opacity:0}}
+  .dash-cards{display:flex;gap:11px;margin-top:auto}
+  .dash-card{flex:1;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:13px;padding:13px}
+  .dash-card .v{font-family:var(--serif);font-size:20px;font-weight:600}
+  .dash-card .k{font-size:10px;color:var(--mute-2);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+  /* data visual */
+  .data-nodes{position:absolute;inset:0}
+  .node{position:absolute;background:var(--card-2);border:1px solid var(--line-2);border-radius:13px;padding:12px 16px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+  .node svg{width:17px;height:17px}
+  .node-c{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--green);color:var(--ink);font-family:var(--serif);font-weight:700;padding:16px 20px;border-radius:15px;font-size:15px;z-index:3;box-shadow:0 0 40px var(--green-glow)}
+  @media(max-width:880px){.feat{grid-template-columns:1fr;gap:36px}.feat.flip .feat-text{order:0}.feat-visual{height:300px}}
+ 
+  /* ---------- PRINCIPLE / mission band ---------- */
+  .principle{background:linear-gradient(180deg,var(--ink),var(--ink-2));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .principle .wrap{text-align:center;max-width:920px}
+  .principle .mark{width:60px;height:60px;border-radius:17px;background:var(--green);display:grid;place-items:center;margin:0 auto 36px;box-shadow:0 14px 40px var(--green-glow)}
+  .principle .mark svg{width:32px;height:32px}
+  .principle blockquote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,4.4vw,52px);line-height:1.18;letter-spacing:-.01em;margin-bottom:30px}
+  .principle blockquote .hl{color:var(--green);font-style:normal;font-weight:600}
+  .principle cite{font-style:normal;font-size:15px;color:var(--mute);letter-spacing:.04em}
+  .principle cite b{color:var(--white)}
+ 
+  /* ---------- STATS ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px}
+  .stat{text-align:left;padding:30px 26px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:border-color .4s,transform .5s var(--ease)}
+  .stat:hover{border-color:var(--line-2);transform:translateY(-6px)}
+  .stat b{font-family:var(--serif);font-size:clamp(40px,4.4vw,56px);font-weight:600;color:var(--green);line-height:1;display:block}
+  .stat span{font-size:14px;color:var(--mute);margin-top:12px;display:block;line-height:1.45}
+  @media(max-width:880px){.prob-grid,.stats{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.prob-grid,.stats{grid-template-columns:1fr}}
+ 
+  /* ---------- FOUNDER ---------- */
+  .founder-card{display:grid;grid-template-columns:auto 1fr;gap:42px;align-items:center;background:linear-gradient(150deg,var(--card),var(--ink-2));border:1px solid var(--line);border-radius:28px;padding:52px;margin-top:64px}
+  .founder-av{width:130px;height:130px;border-radius:50%;background:linear-gradient(150deg,var(--green),var(--green-d));display:grid;place-items:center;font-family:var(--serif);font-size:44px;font-weight:600;color:var(--ink);box-shadow:0 14px 40px var(--green-glow)}
+  .founder-info .role{font-size:13px;color:var(--green);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  .founder-info h3{font-family:var(--serif);font-size:30px;font-weight:600;margin-bottom:16px}
+  .founder-info p{font-size:16px;color:var(--mute);line-height:1.66;max-width:640px}
+  .founder-info p .hl{color:var(--mint)}
+  @media(max-width:680px){.founder-card{grid-template-columns:1fr;text-align:center;padding:38px 28px}.founder-av{margin:0 auto}.founder-info p{margin:0 auto}}
+ 
+  /* ---------- CTA ---------- */
+  .cta-band{position:relative;overflow:hidden;border-radius:34px;background:linear-gradient(150deg,#0E1B15,#0A120F);border:1px solid var(--line-2);padding:80px 64px;text-align:center;margin:0 auto;max-width:var(--maxw)}
+  .cta-band .cg{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:.14;filter:blur(70px);top:-200px;left:50%;transform:translateX(-50%)}
+  .cta-band h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,56px);font-weight:600;line-height:1.06;margin-bottom:20px;position:relative;z-index:1}
+  .cta-band h2 .it{font-style:italic;color:var(--green);font-weight:400}
+  .cta-band p{font-size:18px;color:var(--mute);max-width:520px;margin:0 auto 38px;position:relative;z-index:1}
+  .cta-band .hero-cta{justify-content:center;position:relative;z-index:1}
+ 
+  /* ---------- FOOTER ---------- */
+  footer{padding:80px 0 40px;border-top:1px solid var(--line);margin-top:120px;position:relative;z-index:2}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px}
+  .foot-brand .logo{margin-bottom:20px}
+  .foot-brand p{font-size:14.5px;color:var(--mute);max-width:300px;line-height:1.6}
+  .foot-col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute-2);margin-bottom:18px;font-weight:700}
+  .foot-col a{display:block;font-size:14.5px;color:var(--mute);margin-bottom:12px;transition:color .25s}
+  .foot-col a:hover{color:var(--green)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:30px;border-top:1px solid var(--line);font-size:13px;color:var(--mute-2);flex-wrap:wrap;gap:16px}
+  .foot-bottom .tag{font-style:italic;font-family:var(--serif);color:var(--mute)}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.cta-band{padding:54px 28px}}
+ 
+  .scrollbar-thin{}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+ 
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"><img src="data:image/png;base64,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" alt="LUNO"></span>
+      LUNO
+    </a>
+    <div class="nav-links">
+      <a href="#story">Our Story</a>
+      <a href="#features">Features</a>
+      <a href="#owners">For Owners</a>
+      <a href="#contact">Contact</a>
+      <span class="lang"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1DD882" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="#1DD882" stroke-width="1.3"/></svg> Swahili</span>
+      <a href="#contact" class="nav-cta">Get App</a>
+    </div>
+  </div>
+</nav>
+ 
+<!-- HERO -->
+<header>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Motorcycle Ownership Platform — East Africa</span>
+        <h1>Own your <span class="lt">future,</span><br><span class="it">one payment</span><br>at a time.</h1>
+        <p class="hero-sub">LUNO tracks every shilling toward motorcycle ownership. Digital proof. Real-time progress. No more lost receipts, disputed payments, or notebook chaos.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Download Free <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#060A09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#story" class="btn-ghost">Read Our Story</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="float-badge fb-1">
+          <span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="#1DD882" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span class="fb-t"><b>SOS Active</b><span>Protected on the road</span></span>
+        </div>
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="phone-screen">
+            <div class="ps-label">Your journey</div>
+            <div class="ps-driver">Karibu, Juma 👋</div>
+            <div class="ring-wrap">
+              <svg width="172" height="172" viewBox="0 0 172 172">
+                <circle cx="86" cy="86" r="74" fill="none" stroke="#1F2D27" stroke-width="13"/>
+                <circle cx="86" cy="86" r="74" fill="none" stroke="#1DD882" stroke-width="13" stroke-linecap="round" stroke-dasharray="465" stroke-dashoffset="135" style="filter:drop-shadow(0 0 8px #1DD88266)"/>
+              </svg>
+              <div class="ps-pct"><div><b>71%</b><span>Owned</span></div></div>
+            </div>
+            <div class="ps-freedom">
+              <div class="lbl">Freedom Date</div>
+              <div class="date">14 March 2027</div>
+              <div class="sub">22 weeks to full ownership</div>
+            </div>
+            <div class="ps-row">
+              <div class="ps-pay"><div class="v">70,000</div><div class="k">This week ✓</div></div>
+              <div class="ps-pay"><div class="v">2.41M</div><div class="k">Paid so far</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge fb-2">
+          <span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 16l3-4 3 2 4-7" stroke="#1DD882" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="fb-t"><b>+12,000 today</b><span>Verified payment</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- TRUST MARQUEE -->
+<div class="trust">
+  <div class="trust-track" id="track">
+    <!-- duplicated for seamless loop -->
+  </div>
+</div>
+ 
+<!-- PROBLEM -->
+<section id="story">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">The Reality on Our Roads</span>
+      <h2 class="sec-title">Hard work, <span class="it">no record</span> to show for it.</h2>
+      <p class="sec-lead">Across East Africa, a million riders move the economy on two wheels — yet they remain unprotected, unbanked, and unseen. LUNO was built to change that.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke="#F4B740" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Notebook chaos</h3>
+        <p>Payments tracked in tattered notebooks and memory. Lost receipts and disputed totals strain the trust between owner and driver.</p>
+      </div>
+      <div class="prob reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" stroke="#1DD882" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>No financial identity</h3>
+        <p>Without records, hard-working drivers can't access loans, insurance, or recognition — trapped outside the formal economy.</p>
+      </div>
+      <div class="prob reveal">
+        <div class="prob-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z" stroke="#1DD882" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <h3>No safety net</h3>
+        <p>When a driver is attacked on the road, help is far away and families learn too late. Dignity and safety should not be a luxury.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FEATURES -->
+<section id="features" style="padding-top:40px">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">What LUNO Does</span>
+      <h2 class="sec-title">One app. <span class="it">Three promises</span> kept.</h2>
+    </div>
+ 
+    <!-- Feature 1: ownership -->
+    <div class="feat reveal">
+      <div class="feat-text">
+        <span class="feat-tag"><span class="dot"></span>OWNERSHIP TRACKING</span>
+        <h3>Every shilling, <span class="it">counted</span> toward freedom.</h3>
+        <p>LUNO turns rent-to-own into a clear, motivating journey. Drivers watch their ownership ring fill and see their exact “freedom date” — the day the bike becomes theirs.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Live ownership progress, in real time</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Digital proof of every payment — no disputes</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>A motivating “freedom date” countdown</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="fv-glow fv-1"></div>
+        <div class="dash" style="justify-content:center;align-items:center">
+          <div class="ring-wrap" style="width:200px;height:200px;margin:0">
+            <svg width="200" height="200" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="84" fill="none" stroke="#1F2D27" stroke-width="15"/>
+              <circle cx="100" cy="100" r="84" fill="none" stroke="#1DD882" stroke-width="15" stroke-linecap="round" stroke-dasharray="528" stroke-dashoffset="153" style="filter:drop-shadow(0 0 10px #1DD88266)"/>
+            </svg>
+            <div class="ps-pct"><div><b style="font-size:52px">71%</b><span>Toward ownership</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Feature 2: SOS -->
+    <div class="feat flip reveal">
+      <div class="feat-text">
+        <span class="feat-tag"><span class="dot"></span>DRIVER SAFETY</span>
+        <h3>A button that <span class="it">brings help.</span></h3>
+        <p>Born from a real emergency, the hold-to-fire SOS sends a driver’s live location to their owner and next-of-kin in seconds. Protection on every ride — never a kill-switch, always a lifeline.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One-touch emergency alert with live GPS</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Instant notification to owner & family</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Built for dignity and peace of mind</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="fv-glow fv-1" style="background:radial-gradient(circle,#FF5C5C,transparent 70%)"></div>
+        <div class="sos-ring"><div class="sos-btn">SOS</div></div>
+      </div>
+    </div>
+ 
+    <!-- Feature 3: owner dashboard -->
+    <div class="feat reveal" id="owners">
+      <div class="feat-text">
+        <span class="feat-tag"><span class="dot"></span>FOR FLEET OWNERS</span>
+        <h3>Run the business, <span class="it">protect the driver.</span></h3>
+        <p>Owners see fleet health, revenue velocity, and verified profit at a glance — across every bike and driver. Manage contracts and payments without a single notebook.</p>
+        <ul class="feat-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fleet Health Score & revenue velocity</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Verified profit, calculated automatically</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline on low-end phones</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="fv-glow fv-1"></div>
+        <div class="dash">
+          <div class="dash-top">
+            <div><div class="dash-lbl">Fleet Health</div><div class="dash-score">94<small>/100</small></div></div>
+            <div style="text-align:right"><div class="dash-lbl">Vehicles</div><div class="dash-score" style="font-size:40px">12</div></div>
+          </div>
+          <div class="bars">
+            <div class="bar" style="height:50%;animation-delay:.1s"></div>
+            <div class="bar" style="height:68%;animation-delay:.18s"></div>
+            <div class="bar" style="height:58%;animation-delay:.26s"></div>
+            <div class="bar" style="height:82%;animation-delay:.34s"></div>
+            <div class="bar" style="height:72%;animation-delay:.42s"></div>
+            <div class="bar" style="height:95%;animation-delay:.5s"></div>
+            <div class="bar" style="height:88%;animation-delay:.58s"></div>
+          </div>
+          <div class="dash-cards">
+            <div class="dash-card"><div class="v">8.4M</div><div class="k">This month</div></div>
+            <div class="dash-card"><div class="v">98%</div><div class="k">On-time</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PRINCIPLE -->
+<section class="principle">
+  <div class="wrap reveal">
+    <div class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.5-9.3C.9 8.3 2.5 4.5 6 4.5c2 0 3.3 1.2 4 2.4.7-1.2 2-2.4 4-2.4 3.5 0 5.1 3.8 3.5 7.2C19 16.6 12 21 12 21z" stroke="#060A09" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+    <blockquote>“LUNO is built to be <span class="hl">subordinate to the human need.</span> We make money so the mission can survive — never the other way around.”</blockquote>
+    <cite>— <b>Dr. Ally Mohammed Said</b>, Founder · Emergency Medicine Doctor & Fleet Owner</cite>
+  </div>
+</section>
+ 
+<!-- STATS -->
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">Already Moving</span>
+      <h2 class="sec-title">Real drivers. Real roads. <span class="it">Real progress.</span></h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b>3</b><span>Cities live — Dar, Arusha &amp; Mwanza</span></div>
+      <div class="stat reveal"><b>1M+</b><span>Bodaboda &amp; bajaji across Tanzania</span></div>
+      <div class="stat reveal"><b>100%</b><span>Of payments digitally verified</span></div>
+      <div class="stat reveal"><b>EAC</b><span>The same model scales region-wide</span></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOUNDER -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">Built By One Of Their Own</span>
+      <h2 class="sec-title">Forged in an <span class="it">emergency room.</span></h2>
+    </div>
+    <div class="founder-card reveal">
+      <div class="founder-av">AS</div>
+      <div class="founder-info">
+        <div class="role">Founder · Managing Director</div>
+        <h3>Dr. Ally Mohammed Said</h3>
+        <p>An Emergency Medicine doctor at Tanzania's national hospital — and a bodaboda &amp; bajaji fleet owner. He treats the riders a broken system breaks, and runs the very business LUNO digitizes. <span class="hl">He built the entire platform himself, to serve the people upstream — before they arrive broken.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="cta-band reveal">
+    <div class="cg"></div>
+    <h2>Your bike. Your record.<br><span class="it">Your future.</span></h2>
+    <p>Join the drivers and owners building real ownership — one verified payment at a time.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn-primary">Download Free <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#060A09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="mailto:ally@lunomj.com" class="btn-ghost">Talk to Us</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo"><span class="logo-mark"><img src="data:image/png;base64,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" alt="LUNO"></span>LUNO</a>
+        <p>The motorcycle-ownership platform for East Africa's bodaboda economy. Run the business. Protect the driver. Make the sector bankable.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <a href="#features">Ownership Tracking</a>
+        <a href="#features">Driver Safety</a>
+        <a href="#owners">For Owners</a>
+        <a href="#">Get the App</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#story">Our Story</a>
+        <a href="#">Mission</a>
+        <a href="mailto:ally@lunomj.com">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get In Touch</h4>
+        <a href="mailto:ally@lunomj.com">ally@lunomj.com</a>
+        <a href="#">Dar es Salaam, Tanzania</a>
+        <a href="#">@lunomwanajando</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LUNO Mwanajando Technologies Ltd. All rights reserved.</span>
+      <span class="tag">Miliki. Salama. Tambulika.</span>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+  // nav scroll state
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+ 
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
+ 
+  // build trust marquee (duplicated for seamless loop)
+  const items=[
+    ['M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z','Driver','Safety SOS'],
+    ['M4 19V5M4 19h16M8 16l3-4 3 2 4-7','Real-time','Payment tracking'],
+    ['M3 21h18M5 21V10l7-5 7 5v11','Path to','Ownership'],
+    ['M12 2 2 7v10l10 5 10-5V7L12 2z','PDPA','Compliant'],
+    ['M2 12h20M12 2c3 3 3 17 0 20M12 2C9 5 9 19 12 22','Built for','East Africa'],
+    ['M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6','Owner pays,','driver free'],
+  ];
+  const track=document.getElementById('track');
+  const make=()=>items.map(([d,a,b])=>`<div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="${d}" stroke="#1DD882" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>${a}</b> ${b}</div>`).join('');
+  track.innerHTML=make()+make();
+</script>
+</body>
+</html>
+ 
