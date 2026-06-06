@@ -72,10 +72,14 @@
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--green);transition:width .3s var(--ease)}
   .nav-links a:hover{color:var(--white)}
   .nav-links a:hover::after{width:100%}
-  .nav-cta{padding:11px 22px;border-radius:100px;background:var(--green);color:var(--ink);font-weight:700;font-size:14px;box-shadow:0 6px 22px var(--green-glow);transition:transform .3s var(--ease),box-shadow .3s}
+  .nav-cta{padding:11px 22px;border-radius:100px;background:var(--green);color:#04110B;font-weight:800;font-size:14px;box-shadow:0 6px 22px var(--green-glow);transition:transform .3s var(--ease),box-shadow .3s}
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
-  .lang{padding:8px 14px;border:1px solid var(--line-2);border-radius:100px;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:7px;transition:border-color .25s}
-  .lang:hover{border-color:var(--green-d)}
+  .lang{padding:8px 14px;border:1px solid var(--line-2);border-radius:100px;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:7px;transition:border-color .25s,color .25s;background:none;font-family:var(--sans);font-weight:500}
+  .lang:hover{border-color:var(--green-d);color:var(--white)}
+  .soon-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:100px;background:rgba(244,183,64,.12);border:1px solid rgba(244,183,64,.3);color:var(--amber);font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .soon-pill .pdot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);animation:blink 1.6s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+  .sos-soon{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;white-space:nowrap}
   @media(max-width:880px){.nav-links a:not(.nav-cta),.lang{display:none}}
 
   /* HERO */
@@ -232,7 +236,20 @@
   .calc-result .rdate .k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-2);margin-bottom:4px}
   @media(max-width:880px){.calc{grid-template-columns:1fr;gap:36px;padding:34px 26px}}
 
-  /* PRINCIPLE */
+  /* STORY (origin) */
+  .story-wrap{background:linear-gradient(180deg,var(--ink-2),var(--ink));border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+  .story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;margin-top:56px}
+  .story-flame{position:relative;height:380px;border-radius:26px;border:1px solid var(--line);background:radial-gradient(circle at 50% 70%,#1a0f08,var(--ink));display:grid;place-items:center;overflow:hidden}
+  .story-flame .ember{position:absolute;bottom:-40px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(244,140,40,.5),rgba(244,80,40,.15) 50%,transparent 72%);filter:blur(18px);animation:emberPulse 4s var(--ease) infinite}
+  .story-flame .coal{font-size:84px;position:relative;z-index:2;animation:emberPulse 3s var(--ease) infinite}
+  @keyframes emberPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.08);opacity:1}}
+  .story-flame .spark{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber)}
+  .story-quote{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,28px);line-height:1.4;color:var(--white);margin-bottom:26px;padding-left:22px;border-left:2px solid var(--green)}
+  .story-body p{font-size:16px;color:var(--mute);line-height:1.74;margin-bottom:16px}
+  .story-body p .hl{color:var(--mint)}
+  .story-body em{color:var(--amber);font-style:italic}
+  .story-tag{font-family:var(--mono,var(--sans));font-size:13px;color:var(--green);font-weight:600;letter-spacing:.02em;margin-bottom:18px;opacity:.85}
+  @media(max-width:880px){.story-grid{grid-template-columns:1fr;gap:36px}.story-flame{height:280px}}
   .principle{background:linear-gradient(180deg,var(--ink),var(--ink-2));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .principle .wrap{text-align:center;max-width:920px}
   .principle .mark{width:60px;height:60px;border-radius:17px;background:var(--green);display:grid;place-items:center;margin:0 auto 36px;box-shadow:0 14px 40px var(--green-glow)}
@@ -307,13 +324,13 @@
   <div class="nav-inner">
     <a href="#" class="logo" data-cursor><span class="logo-mark"><img src="data:image/png;base64,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" alt="LUNO"></span>LUNO</a>
     <div class="nav-links">
-      <a href="#story">Our Story</a>
-      <a href="#how">How It Works</a>
-      <a href="#features">Features</a>
-      <a href="#calculator">Calculator</a>
-      <a href="#faq">FAQ</a>
-      <span class="lang" data-cursor><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1DD882" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="#1DD882" stroke-width="1.3"/></svg> Swahili</span>
-      <a href="#contact" class="nav-cta" data-cursor>Get App</a>
+      <a href="#story" data-i18n="nav_story">Our Story</a>
+      <a href="#how" data-i18n="nav_how">How It Works</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#calculator" data-i18n="nav_calc">Calculator</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <button class="lang" id="langBtn" data-cursor><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1DD882" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="#1DD882" stroke-width="1.3"/></svg> <span id="langLabel">Swahili</span></button>
+      <a href="#contact" class="nav-cta" data-cursor data-i18n="getApp">Get App</a>
     </div>
   </div>
 </nav>
@@ -323,20 +340,20 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="eyebrow">Motorcycle Ownership Platform — East Africa</span>
+        <span class="eyebrow" data-i18n="hero_eyebrow">Motorcycle Ownership Platform — East Africa</span>
         <h1>
           <span class="hero-line"><span>Own your <span class="lt">future,</span></span></span>
           <span class="hero-line"><span class="it">one payment</span></span>
           <span class="hero-line"><span>at a time.</span></span>
         </h1>
-        <p class="hero-sub">LUNO tracks every shilling toward motorcycle ownership. Digital proof. Real-time progress. No more lost receipts, disputed payments, or notebook chaos.</p>
+        <p class="hero-sub" data-i18n="hero_sub">LUNO tracks every shilling toward motorcycle ownership. Digital proof. Real-time progress. No more lost receipts, disputed payments, or notebook chaos.</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn-primary" data-cursor><span>Download Free <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#060A09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          <a href="#story" class="btn-ghost" data-cursor>Read Our Story</a>
+          <a href="#contact" class="btn-primary" data-cursor><span data-i18n="hero_btn1">Download Free</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="margin-left:8px"><path d="M5 12h14M13 6l6 6-6 6" stroke="#060A09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a href="#story" class="btn-ghost" data-cursor data-i18n="hero_btn2">Read Our Story</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="float-badge fb-1"><span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="#1DD882" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fb-t"><b>SOS Active</b><span>Protected on the road</span></span></div>
+        <div class="float-badge fb-1"><span class="fb-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="#F4B740" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span class="fb-t"><b>SOS &mdash; Coming Soon</b><span>Driver safety, on the way</span></span></div>
         <div class="phone">
           <div class="notch"></div>
           <div class="phone-screen">
@@ -364,7 +381,34 @@
 
 <div class="trust"><div class="trust-track" id="track"></div></div>
 
+<div class="story-wrap">
 <section id="story">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">Our Story &mdash; From Fire to Finance</span>
+      <h2 class="sec-title">Named after a man who <span class="it">refused to fear.</span></h2>
+    </div>
+    <div class="story-grid">
+      <div class="story-flame reveal">
+        <div class="ember"></div>
+        <div class="coal">&#128293;</div>
+        <div class="spark" style="top:30%;left:40%"></div>
+        <div class="spark" style="top:45%;left:62%"></div>
+        <div class="spark" style="top:60%;left:35%"></div>
+      </div>
+      <div class="story-body reveal">
+        <div class="story-tag">&ldquo;Luuuunooo, Luuuunooo&hellip; Luno amechoma jando.&rdquo;</div>
+        <blockquote class="story-quote">&ldquo;If these spirits are so mighty, why can they not stop the hunger, disease, and oppression we face every day?&rdquo;</blockquote>
+        <p>In 1970s Southern Tanzania, tradition was law and rituals were never questioned. Luno was a young man who had never set foot in a classroom &mdash; yet he carried a logic stronger than blind fear.</p>
+        <p>To test the spirits, he placed a hot coal in the corner of a sacred <em>jando</em> hut and watched it burn to the ground. When the curses everyone expected never came, Luno asked his community that one powerful question.</p>
+        <p><span class="hl">We built LUNO to carry that same spirit of defiance into the modern transport sector.</span> For too long the bodaboda economy has been held back by old habits &mdash; messy notebooks, fading receipts, endless disputes. LUNO replaces the unreliable old way with a permanent, automated, human-first system. It is time to stop doing things the old way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="problem">
   <div class="wrap">
     <div class="reveal">
       <span class="sec-eyebrow">The Reality on Our Roads</span>
@@ -428,9 +472,9 @@
 
     <div class="feat flip reveal">
       <div class="feat-text">
-        <span class="feat-tag"><span class="dot"></span>DRIVER SAFETY</span>
+        <span class="feat-tag" style="background:rgba(244,183,64,.12);color:var(--amber)"><span class="dot" style="background:var(--amber);box-shadow:0 0 10px var(--amber)"></span>DRIVER SAFETY &middot; COMING SOON</span>
         <h3>A button that <span class="it">brings help.</span></h3>
-        <p>Born from a real emergency, the hold-to-fire SOS sends a driver&rsquo;s live location to their owner and next-of-kin in seconds. Protection on every ride &mdash; never a kill-switch, always a lifeline.</p>
+        <p>Born from a real emergency in our founder&rsquo;s own work, the hold-to-fire SOS will send a driver&rsquo;s live location to their owner and next-of-kin in seconds. <b style="color:var(--white)">This is the feature we are building next</b> &mdash; protection on every ride, never a kill-switch, always a lifeline.</p>
         <ul class="feat-list">
           <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>One-touch emergency alert with live GPS</li>
           <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1DD88222"/><path d="m8 12 3 3 5-6" stroke="#1DD882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Instant notification to owner &amp; family</li>
@@ -438,8 +482,9 @@
         </ul>
       </div>
       <div class="feat-visual">
-        <div class="fv-glow" style="background:radial-gradient(circle,#FF5C5C,transparent 70%)"></div>
+        <div class="fv-glow" style="background:radial-gradient(circle,#F4B740,transparent 70%);opacity:.13"></div>
         <div class="sos-ring"><div class="sos-btn">SOS</div></div>
+        <div class="sos-soon"><span class="soon-pill"><span class="pdot"></span>In development</span></div>
       </div>
     </div>
 
@@ -509,7 +554,7 @@
   <div class="wrap reveal">
     <div class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.5-9.3C.9 8.3 2.5 4.5 6 4.5c2 0 3.3 1.2 4 2.4.7-1.2 2-2.4 4-2.4 3.5 0 5.1 3.8 3.5 7.2C19 16.6 12 21 12 21z" stroke="#060A09" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
     <blockquote>&ldquo;LUNO is built to be <span class="hl">subordinate to the human need.</span> We make money so the mission can survive &mdash; never the other way around.&rdquo;</blockquote>
-    <cite>&mdash; <b>Dr. Ally Mohammed Said</b>, Founder &middot; Emergency Medicine Doctor &amp; Fleet Owner</cite>
+    <cite>&mdash; <b>The LUNO founding principle</b></cite>
   </div>
 </section>
 
@@ -529,11 +574,11 @@
   <div class="wrap">
     <div class="reveal"><span class="sec-eyebrow">Built By One Of Their Own</span><h2 class="sec-title">Forged in an <span class="it">emergency room.</span></h2></div>
     <div class="founder-card reveal">
-      <div class="founder-av">AS</div>
+      <div class="founder-av"><svg width="58" height="58" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke="#04110B" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8v5M9.5 10.5h5" stroke="#04110B" stroke-width="1.6" stroke-linecap="round"/></svg></div>
       <div class="founder-info">
-        <div class="role">Founder &middot; Managing Director</div>
-        <h3>Dr. Ally Mohammed Said</h3>
-        <p>An Emergency Medicine doctor at Tanzania's national hospital &mdash; and a bodaboda &amp; bajaji fleet owner. He treats the riders a broken system breaks, and runs the very business LUNO digitizes. <span class="hl">He built the entire platform himself, to serve the people upstream &mdash; before they arrive broken.</span></p>
+        <div class="role">The Founder</div>
+        <h3>A doctor. A fleet owner. A builder.</h3>
+        <p>LUNO was created by an Emergency Medicine doctor at Tanzania's national hospital &mdash; who is also a bodaboda &amp; bajaji fleet owner. He treats the riders a broken system breaks, and runs the very business LUNO digitizes. <span class="hl">He built the entire platform himself, to serve the people upstream &mdash; before they arrive broken.</span></p>
       </div>
     </div>
   </div>
@@ -545,7 +590,7 @@
     <div class="faq reveal">
       <div class="faq-item"><button class="faq-q" data-cursor>Is LUNO free for drivers?</button><div class="faq-a"><p>Yes. Drivers never pay to use LUNO. The owner covers a small platform fee &mdash; the driver gets safety, proof of every payment, and a clear path to owning their bike, at no cost.</p></div></div>
       <div class="faq-item"><button class="faq-q" data-cursor>Does it work without internet?</button><div class="faq-a"><p>LUNO is offline-first. Payments and records are saved on the phone and sync automatically once a connection returns &mdash; built for real conditions on low-end Android devices.</p></div></div>
-      <div class="faq-item"><button class="faq-q" data-cursor>How does the SOS feature work?</button><div class="faq-a"><p>A hold-to-fire button sends the driver&rsquo;s live GPS location to their owner and next-of-kin instantly. It is a lifeline for the driver &mdash; never a remote kill-switch on the vehicle.</p></div></div>
+      <div class="faq-item"><button class="faq-q" data-cursor>How will the SOS feature work?</button><div class="faq-a"><p>SOS is the safety feature we are building next. A hold-to-fire button will send the driver&rsquo;s live GPS location to their owner and next-of-kin instantly &mdash; a lifeline for the driver, never a remote kill-switch on the vehicle.</p></div></div>
       <div class="faq-item"><button class="faq-q" data-cursor>What happens to my data?</button><div class="faq-a"><p>Your data is handled under Tanzania&rsquo;s data-protection law, with consent, and is used to benefit you &mdash; for example, to help you qualify for loans or insurance. It is never sold against your interest.</p></div></div>
       <div class="faq-item"><button class="faq-q" data-cursor>Which cities is LUNO in?</button><div class="faq-a"><p>LUNO is live with drivers in Dar es Salaam, Arusha, and Mwanza, with expansion across Tanzania and East Africa underway.</p></div></div>
     </div>
@@ -559,7 +604,7 @@
     <p>Join the drivers and owners building real ownership &mdash; one verified payment at a time.</p>
     <div class="hero-cta">
       <a href="#" class="btn-primary" data-cursor><span>Download Free <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#060A09" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a href="mailto:ally@lunomj.com" class="btn-ghost" data-cursor>Talk to Us</a>
+      <a href="mailto:hello@lunomj.com" class="btn-ghost" data-cursor>Talk to Us</a>
     </div>
   </div>
 </section>
@@ -578,11 +623,11 @@
           <a href="https://tiktok.com/@lunomwanajando" target="_blank" rel="noopener" class="soc" data-cursor aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
         </div>
       </div>
-      <div class="foot-col"><h4>Product</h4><a href="#features">Ownership Tracking</a><a href="#features">Driver Safety</a><a href="#owners">For Owners</a><a href="#calculator">Calculator</a></div>
-      <div class="foot-col"><h4>Company</h4><a href="#story">Our Story</a><a href="#how">How It Works</a><a href="#faq">FAQ</a><a href="mailto:ally@lunomj.com">Contact</a></div>
-      <div class="foot-col"><h4>Get In Touch</h4><a href="mailto:ally@lunomj.com">ally@lunomj.com</a><a href="#">Dar es Salaam, Tanzania</a><a href="https://instagram.com/lunomwanajando" target="_blank" rel="noopener">@lunomwanajando</a></div>
+      <div class="foot-col"><h4>Product</h4><a href="#features">Ownership Tracking</a><a href="#features">Driver Safety</a><a href="#owners">For Owners</a><a href="#calculator" data-i18n="nav_calc">Calculator</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="#story" data-i18n="nav_story">Our Story</a><a href="#how" data-i18n="nav_how">How It Works</a><a href="#faq" data-i18n="nav_faq">FAQ</a><a href="mailto:hello@lunomj.com">Contact</a></div>
+      <div class="foot-col"><h4>Get In Touch</h4><a href="mailto:hello@lunomj.com">hello@lunomj.com</a><a href="#">Dar es Salaam, Tanzania</a><a href="https://instagram.com/lunomwanajando" target="_blank" rel="noopener">@lunomwanajando</a></div>
     </div>
-    <div class="foot-bottom"><span>&copy; 2026 LUNO Mwanajando Technologies Ltd. All rights reserved.</span><span class="tag">Miliki. Salama. Tambulika.</span></div>
+    <div class="foot-bottom"><span>&copy; 2026 LUNO Mwanajando Technologies Ltd. All rights reserved.</span><span class="tag">Miliki. Salama. Tambulika.</span><span>Built with <span style="color:#FF5C5C">&#10084;</span> from Tanzania <span aria-hidden="true">&#127481;&#127480;</span></span></div>
   </div>
 </footer>
 
@@ -624,7 +669,7 @@
   document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
 
   // trust marquee
-  const items=[['M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z','Driver','Safety SOS'],['M4 19V5M4 19h16M8 16l3-4 3 2 4-7','Real-time','Payment tracking'],['M3 21h18M5 21V10l7-5 7 5v11','Path to','Ownership'],['M12 2 2 7v10l10 5 10-5V7L12 2z','PDPA','Compliant'],['M2 12h20M12 2c3 3 3 17 0 20M12 2C9 5 9 19 12 22','Built for','East Africa'],['M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6','Owner pays,','driver free']];
+  const items=[['M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z','SOS safety','coming soon'],['M4 19V5M4 19h16M8 16l3-4 3 2 4-7','Real-time','Payment tracking'],['M3 21h18M5 21V10l7-5 7 5v11','Path to','Ownership'],['M12 2 2 7v10l10 5 10-5V7L12 2z','PDPA','Compliant'],['M2 12h20M12 2c3 3 3 17 0 20M12 2C9 5 9 19 12 22','Built for','East Africa'],['M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6','Owner pays,','driver free']];
   const mk=()=>items.map(([d,a,b])=>`<div class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="${d}" stroke="#1DD882" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><b>${a}</b> ${b}</div>`).join('');
   document.getElementById('track').innerHTML=mk()+mk();
 
@@ -635,7 +680,28 @@
     if(!open)item.classList.add('open');
   }));
 
-  // freedom-date calculator
+  // language toggle (EN <-> SW)
+  const I18N={
+    en:{nav_story:'Our Story',nav_how:'How It Works',nav_features:'Features',nav_calc:'Calculator',nav_faq:'FAQ',getApp:'Get App',
+        hero_eyebrow:'Motorcycle Ownership Platform — East Africa',
+        hero_sub:'LUNO tracks every shilling toward motorcycle ownership. Digital proof. Real-time progress. No more lost receipts, disputed payments, or notebook chaos.',
+        hero_btn1:'Download Free',hero_btn2:'Read Our Story'},
+    sw:{nav_story:'Hadithi Yetu',nav_how:'Inavyofanya Kazi',nav_features:'Vipengele',nav_calc:'Kikokotoo',nav_faq:'Maswali',getApp:'Pata App',
+        hero_eyebrow:'Jukwaa la Umiliki wa Pikipiki — Afrika Mashariki',
+        hero_sub:'LUNO inafuatilia kila shilingi kuelekea umiliki wa pikipiki. Ushahidi wa kidijitali. Maendeleo ya wakati halisi. Hakuna risiti zilizopotea, migogoro ya malipo, wala fujo la daftari.',
+        hero_btn1:'Pakua Bure',hero_btn2:'Soma Hadithi Yetu'}
+  };
+  let curLang='en';
+  const langBtn=document.getElementById('langBtn'),langLabel=document.getElementById('langLabel');
+  function applyLang(l){
+    curLang=l;const dict=I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(dict[k])el.textContent=dict[k];});
+    langLabel.textContent = l==='en' ? 'Swahili' : 'English';
+    document.documentElement.lang = l;
+  }
+  langBtn.addEventListener('click',()=>applyLang(curLang==='en'?'sw':'en'));
+
+
   const seg=document.getElementById('segType'),wkRange=document.getElementById('wkRange'),
         wkVal=document.getElementById('wkVal'),priceVal=document.getElementById('priceVal'),
         weeksOut=document.getElementById('weeksOut'),weeksSub=document.getElementById('weeksSub'),dateOut=document.getElementById('dateOut');
